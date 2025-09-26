@@ -6,6 +6,10 @@
 #include "GameFramework/Character.h"
 #include "SCharacter.generated.h"
 
+class UCameraComponent;
+class USpringArmComponent;
+
+
 UCLASS()
 class ACTIONROGUELIKE_API ASCharacter : public ACharacter
 {
@@ -16,6 +20,9 @@ public:
 	ASCharacter();
 
 protected:
+	USpringArmComponent* SpringArm;
+	
+	UCameraComponent* CameraComp;
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
