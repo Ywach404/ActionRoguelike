@@ -20,8 +20,10 @@ public:
 	ASCharacter();
 
 protected:
-	USpringArmComponent* SpringArm;
+	UPROPERTY(VisibleAnywhere)
+	USpringArmComponent* SpringArmComp;
 	
+	UPROPERTY(VisibleAnywhere)	
 	UCameraComponent* CameraComp;
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
